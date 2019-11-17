@@ -3,6 +3,8 @@ from flask import Flask
 import mysql.connector
 import json
 
+from flask import render_template
+
 app = Flask(__name__)
 
 
@@ -25,9 +27,10 @@ def leads() -> List[Dict]:
 
 
 @app.route('/')
-def index() -> str:
-    return json.dumps({'Leads': leads()})
+def index():
+    return render_template("home.htm")
+
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=True)

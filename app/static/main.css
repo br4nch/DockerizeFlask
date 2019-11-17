@@ -1,0 +1,280 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.hero {
+  display: grid;
+  grid-template-areas: "image herotext";
+  grid-template-columns: minmax(250px, 0.4fr) minmax(250px, 0.6fr);
+  height: 100vh;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-top: 4em;
+  line-height: 1.5;
+  color: #363f60;
+}
+
+#form-wrapper {
+  padding-right: 4em;
+}
+/* @media only screen and (max-width: 600px) {
+  .hero {
+    grid-template-areas: "image" "herotext";
+    grid-template-rows: 60vh 40vh;
+    grid-template-columns: none;
+  }
+  .hero h1 {
+    font-size: 24px;
+  }
+} */
+.subtext {
+  font-size: 18px;
+  line-height: 2;
+  margin-right: 1em;
+  max-width: 70%;
+  color: #636363;
+}
+
+.sub-tagline {
+  font-weight: bold;
+}
+#cta-btn {
+  margin-top: 2em;
+  height: 60px;
+  width: 200px;
+  background-color: #5c7eff;
+  font-weight: bolder;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.content-divider {
+  display: grid;
+  grid-template-areas: "text button";
+  grid-template-columns: 70vw 30vw;
+  height: 30vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.ghost-btn {
+  height: 60px;
+  width: 200px;
+  background: transparent;
+  font-weight: bolder;
+  color: black;
+  border-radius: 10px;
+  font-size: 16px;
+  border-color: black;
+  border-width: 2px;
+  margin: auto;
+  display: block;
+  margin-top: calc(15vh - 30px);
+}
+
+.product-header {
+  display: block;
+  width: 70vh !important;
+  overflow: hidden;
+}
+
+.backdrop {
+  position: absolute;
+  z-index: 1;
+  width: 100vh;
+  overflow: hidden;
+  height: 30vh;
+}
+
+.foreground {
+  position: absolute;
+  z-index: 2;
+  width: 100vh;
+  height: 40vh;
+}
+
+.backdrop-text {
+  font-size: 250px;
+  font-weight: bolder;
+  margin: 0px;
+  padding: 0px;
+  color: #bbbbbb1c;
+  width: 2000px;
+  align-self: end;
+  margin-top: -50px;
+}
+
+.dash {
+  height: 3px;
+  width: 100px;
+  background-color: black;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.foreground h1 {
+  font-size: 50px;
+  margin-left: 20%;
+  margin-top: calc(15vh - 10px);
+  font-weight: 900;
+}
+
+.products-wrapper {
+  display: grid;
+  grid-template-areas:
+    "main-product middle lasts"
+    "main-product prod2 prod3";
+  grid-template-columns: 40vw 23vw 38vw;
+}
+
+.main-product {
+  grid-area: main-product;
+  background-color: lightcyan;
+
+  background-image: url(assets/payu1.jpg);
+  height: 400px;
+  width: 400px;
+  margin-left: 25%;
+  border-radius: 20px;
+}
+
+.corporate-spaces {
+  padding-top: 40%;
+  padding-left: 30%;
+  align-content: center;
+  color: white;
+  font-weight: 400;
+  font-size: x-large;
+}
+.personal-living {
+  grid-area: middle;
+
+  background-image: url(assets/personal_living2.jpg);
+  height: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  margin-left: 8%;
+  border-radius: 20px;
+}
+.personal-text {
+  padding-top: 20%;
+  padding-left: 20%;
+  align-content: center;
+  color: white;
+  font-weight: 400;
+  font-size: x-large;
+}
+.retail-container {
+  background-image: url(assets/renewbuy_1.jpeg);
+  height: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  margin-top: 13%;
+  margin-left: 8%;
+  border-radius: 20px;
+}
+
+.retail-text {
+  padding-top: 20%;
+  padding-left: 20%;
+  align-content: center;
+  color: white;
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.rent-ready-container {
+  background-image: url(assets/rent_ready.jpg);
+  height: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+
+  border-radius: 20px;
+}
+
+.rent-ready-container h3 {
+  padding-top: 20%;
+  padding-left: 20%;
+  align-content: center;
+  color: white;
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.coming-soon-container {
+  background-image: url(assets/personal_living.jpg);
+  height: 180px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+
+  margin-top: 8%;
+  border-radius: 20px;
+}
+
+.coming-soon-container h3 {
+  padding-top: 20%;
+  padding-left: 20%;
+  align-content: center;
+  color: white;
+  font-weight: 400;
+  font-size: x-large;
+}
+
+.product-wrapper-div {
+  width: 85%;
+  display: grid;
+  grid-template-areas:
+    "main-product middle lasts"
+    "main-product prod2 prod3";
+  grid-template-columns: 40vw 23vw 38vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-wrapper {
+  display: grid;
+  grid-template-areas:
+    "project1 project2 project3"
+    "project4 project5 project6";
+  grid-template-columns: 33vw 33vw 34vw;
+}
+.projects-wrapper-div {
+  display: grid;
+  grid-template-areas:
+    "project1 project2 project3"
+    "project4 project5 project6";
+  grid-template-columns: 33vw 33vw 34vw;
+}
+
+.project-tile {
+  height: 450px;
+  background-color: aquamarine;
+  width: 330px;
+  border-radius: 20px;
+}
+
+.tile1 {
+  grid-area: project1;
+  background-image: url(assets/rent_ready.jpg);
+  margin-left: 30%;
+}
+
+.tile2 {
+  grid-area: project2;
+  margin-left: 20%;
+  margin-bottom: 20%;
+}
+.tile3 {
+  grid-area: project3;
+  margin-left: 10%;
+
+  margin-bottom: 20%;
+}
