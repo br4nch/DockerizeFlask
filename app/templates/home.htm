@@ -11,28 +11,89 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+    <script
+      src="https://360player.io/static/dist/scripts/embed.js"
+      async
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      //Preloader
+      $(window).on("load", function() {
+        preloaderFadeOutTime = 200;
+        function hidePreloader() {
+          var preloader = $(".spinner-wrapper");
+
+          preloader.fadeOut(preloaderFadeOutTime);
+        }
+        hidePreloader();
+      });
+
+      $(window)
+        .scroll(function() {
+          var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+          $(".fade").each(function() {
+            /* Check the location of each desired element */
+            var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+            /* If the element is completely within bounds of the window, fade it in */
+            if (objectBottom < windowBottom) {
+              //object comes into view (scrolling down)
+              if ($(this).css("opacity") == 0) {
+                $(this).fadeTo(500, 1);
+              }
+            } else {
+              //object goes out of view (scrolling up)
+              if ($(this).css("opacity") == 1) {
+                $(this).fadeTo(500, 0);
+              }
+            }
+          });
+        })
+        .scroll();
+    </script>
   </head>
   <body>
+    <!--CSS Spinner-->
+    <div class="spinner-wrapper">
+      <div class="spinner"></div>
+    </div>
     <section class="hero">
-      <div></div>
+      <div class="hero-image-wrapper">
+        <img class="  hero-image" src="../static/assets/personal_living2.jpg" />
+        <div class="logo">
+          <img class="logo-image" src="../static/assets/logo2.png" />
+        </div>
+      </div>
       <div>
+        <div id="menu" class="menu">
+          <a id="product">Products</a>
+          <a id="project">Projects</a>
+          <a id="whyus">Why Us</a>
+
+          <div id="call-btn">
+            <img id="phone-icon" src="../static/assets/phone-call.png" />
+          </div>
+          <span id="number">9811210968</span>
+        </div>
         <div id="temp_header"></div>
+
         <div id="form-wrapper">
           <h1 class="hero-text">
-            Interior Design and Furnishing Outsourcing Company
+            Get Your Interiors Ready with <span class="text-logo">Scal</span
+            ><span class="text-logo-e">e</span><sup class="text-logo-e">x</sup>
           </h1>
           <p class="subtext">
-            Redefine your spaces with Scalex
+            India's First Design and Build Company
             <span class="sub-tagline"
-              >End to End interior designing and Furnishing</span
-            >
-            solution for everyone at every scale.
+              >To Provide Modern Designs with Financing
+            </span>
+            taken care for everyone at every Scale.
           </p>
           <button id="cta-btn">Get Quote</button>
         </div>
       </div>
     </section>
-    <section class="content-divider">
+    <section class="content-divider fade">
       <div class="product-header">
         <div class="backdrop">
           <h1 class="backdrop-text">design</h1>
@@ -45,10 +106,10 @@
         </div>
       </div>
       <div class="projects-button-wrapper">
-        <button class="ghost-btn">Projects</button>
+        <button class="ghost-btn">Contact</button>
       </div>
     </section>
-    <section class="products-wrapper">
+    <section class="products-wrapper fade">
       <div class="product-wrapper-div">
         <div class="main-product">
           <h3 class="corporate-spaces">
@@ -65,12 +126,12 @@
           <h3 class="retail-text">Retail Spaces</h3>
         </div>
         <div class="coming-soon-container">
-          <h3>Coming Soon</h3>
+          <h3>Custom Design</h3>
         </div>
       </div>
     </section>
     <section></section>
-    <section class="content-divider">
+    <section class="content-divider fade">
       <div class="product-header">
         <div class="backdrop">
           <h1 class="backdrop-text">work</h1>
@@ -83,17 +144,17 @@
         </div>
       </div>
       <div class="projects-button-wrapper">
-        <button class="ghost-btn">Projects</button>
+        <button class="ghost-btn">Contact</button>
       </div>
     </section>
-    <section class="projects-wrapper">
+    <section class="projects-wrapper fade">
       <div class="projects-wrapper-div">
         <div class="project-tile tile1"></div>
         <div class="project-tile tile2"></div>
         <div class="project-tile tile3"></div>
-        <div class="project-tile"></div>
-        <div class="project-tile"></div>
-        <div class="project-tile"></div>
+        <div class="project-tile tile4"></div>
+        <div class="project-tile tile5"></div>
+        <div class="project-tile tile6"></div>
       </div>
     </section>
     <section class="content-divider">
@@ -112,5 +173,15 @@
     </section>
     <section></section>
     <section></section>
+
+    <footer>
+      <div class="footer-div">
+        <div id="footer-logo">
+          <img src="../static/assets/logo.png" />
+        </div>
+        <div id="quick-link">link</div>
+        <div id="form">form</div>
+      </div>
+    </footer>
   </body>
 </html>

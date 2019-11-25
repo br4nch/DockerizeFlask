@@ -7,34 +7,154 @@ html {
 .hero {
   display: grid;
   grid-template-areas: "image herotext";
-  grid-template-columns: minmax(250px, 0.4fr) minmax(250px, 0.6fr);
+  grid-template-columns: 45vw 55vw;
   height: 100vh;
 }
+.hero-image-wrapper {
+  display: grid;
+  grid-template-areas: "logo space";
+  grid-template-columns: 1fr 1fr;
+  grid-area: image;
+  /* background-image: url(assets/personal_living.jpg); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  -webkit-clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
+  border-radius: 0px 0px 20px 0px;
+  /* -webkit-filter: saturate(5%); /* Safari 6.0 - 9.0 */
+  /* filter: saturate(5%); */
+  height: 800px;
+}
+
+/* 
+zoom animation on hero image
+*/
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+  }
+}
+
+.menu {
+  height: 5%;
+  width: 65%;
+  grid-template-areas: "Product Project Whyus Free number";
+  grid-template-columns: 25% 25% 18% 2% 30%;
+  display: grid;
+  grid-area: herotext;
+
+  background-color: white;
+  align-content: center;
+  z-index: 999;
+  padding-top: 6%;
+  margin-left: 28%;
+}
+.text-logo {
+  color: #0071c0;
+}
+.text-logo-e {
+  color: #00b050;
+}
+
+/* Standard syntax */
+@keyframes zoom {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.5, 1.5); /* Safari 6.0 - 9.0*/
+  }
+}
+
+.hero-image {
+  -webkit-animation: zoom 100s; /* Chrome, Safari, Opera */
+  animation: zoom 50s;
+  width: 1000px;
+  height: 800px;
+  margin-left: -2%;
+}
+
+.logo {
+  padding-top: 15%;
+  padding-left: 18%;
+  margin-left: 0.2fr;
+  width: 16px;
+  display: grid;
+  grid-area: logo;
+  z-index: 999;
+}
+.logo-image {
+  height: 100px;
+  width: 180px;
+  padding-left: 24%;
+  padding-top: 10%;
+
+  /* -webkit-filter: saturate(5%); /* Safari 6.0 - 9.0 */
+  /* filter: saturate(5%); */
+}
+a {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.2em;
+  color: #0071c0;
+  font-size: large;
+  font-weight: bold;
+}
+
+#phone-icon {
+  width: 22px;
+  height: 22px;
+}
+#number {
+  padding-left: 20px;
+  color: #363f60;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;
+  font-size: large;
+}
+#call-btn {
+  height: max-content;
+  width: max-content;
+  display: grid;
+
+  font-weight: bolder;
+  color: white;
+  font-size: 16px;
+  border-width: 1px;
+  border-style: solid;
+}
 .hero h1 {
-  font-size: 3rem;
-  margin-top: 4em;
+  font-size: 3.7vw;
+  margin-top: 2.8em;
+  margin-right: 3.5em;
   line-height: 1.5;
   color: #363f60;
 }
 
 #form-wrapper {
   padding-right: 4em;
+  margin-left: 4em;
 }
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .hero {
     grid-template-areas: "image" "herotext";
     grid-template-rows: 60vh 40vh;
     grid-template-columns: none;
   }
-  .hero h1 {
-    font-size: 24px;
+  .hero-image-wrapper {
+    display: grid;
+    grid-area: image;
   }
-} */
+}
 .subtext {
-  font-size: 18px;
+  font-size: 1.2vw;
   line-height: 2;
-  margin-right: 1em;
+  /* margin-right: 1em; */
   max-width: 70%;
+  /* margin-left: 5em; */
   color: #636363;
 }
 
@@ -256,14 +376,16 @@ html {
 
 .project-tile {
   height: 450px;
-  background-color: aquamarine;
+
   width: 330px;
   border-radius: 20px;
+  background-size: cover;
+  filter: brightness(1);
 }
 
 .tile1 {
   grid-area: project1;
-  background-image: url(assets/rent_ready.jpg);
+  background-image: url(assets/tile3.jpg);
   margin-left: 30%;
 }
 
@@ -271,10 +393,105 @@ html {
   grid-area: project2;
   margin-left: 20%;
   margin-bottom: 20%;
+  background-image: url(assets/karma_1.jpg);
 }
 .tile3 {
   grid-area: project3;
   margin-left: 10%;
-
+  background-image: url(assets/pl3.jpg);
   margin-bottom: 20%;
 }
+
+.tile4 {
+  grid-area: project4;
+  margin-left: 30%;
+  background-image: url(assets/innov83.jpg);
+}
+
+.tile5 {
+  grid-area: project5;
+  margin-left: 20%;
+  background-image: url(assets/payu1.jpg);
+}
+.tile6 {
+  grid-area: project6;
+  margin-left: 10%;
+  background-image: url(assets/wpj1.jpg);
+}
+
+.footer-div {
+  display: grid;
+  grid-template-areas: "logo menu form";
+  grid-template-columns: 30% 30% 40%;
+  width: 100%;
+  position: relative;
+  background: white;
+  padding: 10px 0;
+}
+
+#footer-logo {
+  display: grid;
+  grid-area: logo;
+}
+
+#quick-link {
+  display: grid;
+  grid-area: menu;
+}
+#form {
+  display: grid;
+  grid-area: form;
+}
+
+/*
+Loader CSS
+*/
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #0271c0;
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+  }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+.spinner-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: 999999;
+}
+/******************/
