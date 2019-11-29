@@ -4,6 +4,9 @@ html {
   margin: 0;
   font-family: "IBM Plex Sans", sans-serif;
 }
+.m-hidden {
+  display: none !important;
+}
 .hero {
   display: grid;
   grid-template-areas: "image herotext";
@@ -138,7 +141,7 @@ a {
   padding-right: 4em;
   margin-left: 4em;
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .hero {
     grid-template-areas: "image" "herotext";
     grid-template-rows: 60vh 40vh;
@@ -148,7 +151,7 @@ a {
     display: grid;
     grid-area: image;
   }
-}
+} */
 .subtext {
   font-size: 1.2vw;
   line-height: 2;
@@ -495,3 +498,203 @@ Loader CSS
   z-index: 999999;
 }
 /******************/
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .m-hidden {
+    display: block !important;
+  }
+  .bottom-fix-bar{
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    height: 65px;
+    display: grid;
+    grid-template-areas: 'get-quote' 'contact';
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid #e8e8e8;
+    background: white;
+    z-index: 999;
+  }
+  #cta-btn-mobile{
+    grid-area: get-quote;
+    height: 50px;
+    width: 45vw;
+    background-color: #5c7eff;
+    font-weight: bolder;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    margin: 6px 10px 10px 9px;
+  }
+  #ghost-btn-mobile{
+    grid-area: contact;
+    height: 50px;
+    width: 45vw;
+    font-weight: bolder;
+    color: rgb(0,0,0,0.7);
+    border-radius: 10px;
+    font-size: 14px;
+    background: transparent;
+  }
+  .cta-btn-m-hide{
+    display: none;
+  }
+  body{
+    overflow-x: hidden;
+  }
+
+  .hero{
+    grid-template-areas: "image" "herotext";
+    grid-template-columns: 100%;
+    grid-template-rows: 50vh 50vh;
+    height: 90vh;
+  }
+
+  .hero-image{
+    width: 100vw;
+    height: 50vh;
+    margin-left: -7%;
+  }
+  .hero-image-wrapper{
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    height: 51vh;
+  }
+  .logo-image{
+    height: auto;
+    width: 130px;
+    padding-left: 0%;
+    padding-top: 0%;
+  }
+  #menu{
+    display: none;
+  }
+  .hero h1 {
+    font-size: 1.5em;
+    margin-top: 0px;
+    margin-right: 0px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  #form-wrapper{
+    padding-right: 3em;
+    margin-left: 3em;
+    margin-top: 25px;
+  }
+  .subtext {
+    font-size: 0.7em;
+    max-width: 100%;
+    text-align: center;
+  }  
+  /* SECTION 2 */
+  .ghost-btn{
+    display: none;
+  }
+  .content-divider{
+    grid-template-areas: "text";
+    grid-template-columns: 100vw;
+    grid-template-rows: 100%;
+    height: 80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .product-header{
+    width: 100vw;
+
+  }
+  .backdrop-text {
+    font-size: 6em;
+    margin-top: 0px;
+    padding-left: 15px;
+  }  
+  .backdrop{
+    width: 100vw;
+  }
+  .foreground{
+    width: 100vw;
+  }
+  .foreground h1 {
+    font-size: 1.5em;
+    margin-left: 8%;
+    margin-top: 2.3em;
+    font-weight: 900;
+  }
+  .dash{
+    height: 2px;
+    width: 80px;
+  }
+  .products-wrapper {
+    display: block;
+  }
+  
+  .product-wrapper-div {
+    width: calc(100vw - 40px);
+    grid-template-areas:
+        "main-product main-product"
+        "middle prod2"
+        "lasts prod3";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 35vh 20vh 20vh;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 20px;
+    margin-top: 20px;
+  } 
+  .main-product {
+    height: auto;
+    width: auto;
+    margin-left: 0%;
+    border-radius: 20px;
+    background-size: cover;
+    margin: 10px;
+  }
+  .corporate-spaces {
+    padding-top: 0%;
+    padding-left: 0%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: calc((35vh - 50px)/2);
+  }
+  .personal-text, .rent-ready-container h3, .retail-text, .coming-soon-container h3 {
+    padding-top: 0%;
+    padding-left: 0%;
+    text-align: center;
+    font-size: 1em;
+    margin-top: calc((20vh - 45px)/2);
+  }  
+  .personal-living, .rent-ready-container, .retail-container, .coming-soon-container {
+    height: auto;
+    width: auto;
+    margin-left: 0%;
+    margin-top: 0%;
+    margin: 10px;
+  }
+  /* SECTION 3 */
+  .projects-wrapper{
+    display: block;
+  }
+  .projects-wrapper-div {
+    grid-template-areas:
+      "project1 project2"
+      "project3 project4"
+      "project5 project6";
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 28vh 28vh 28vh;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding: 20px;
+      margin-top: 20px;
+  } 
+  .tile1, .tile2, .tile3, .tile4, .tile5, .tile6{
+    margin: 0%;
+  }
+  .project-tile{
+    height: auto;
+    width: auto;
+    margin: 7px;
+  }
+  /* footer{
+    display: none;
+  } */
+}  
