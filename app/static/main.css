@@ -28,7 +28,33 @@ html {
   /* filter: saturate(5%); */
   height: 800px;
 }
-
+.why-us{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  margin-top: 30vh;
+}
+.why{
+  margin: 30px;
+}
+.content-divider-heading{
+  margin-top: 8vh;
+}
+.content-divider-why{
+  display: grid;
+  grid-template-areas: "one";
+  grid-template-columns: 100vw;
+  height: 70vh;
+  margin-top: 0;
+  margin-bottom: 10vh;
+  text-align: center;
+}
+.material-icons{
+  font-size: 60px !important;
+}
 /* 
 zoom animation on hero image
 */
@@ -497,10 +523,88 @@ Loader CSS
   background-color: white;
   z-index: 999999;
 }
+.clickable-product{
+  cursor: pointer;
+}
+#touchSlider {
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+  background: #ccc;
+  position: relative;
+  overflow: hidden;
+}
+.slider{
+  display: none;
+}
+#touchSlider ul {
+  width: 99999px;
+  height: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#touchSlider ul li {
+  float: left;
+  width: 100%;
+  height: 150px;
+  background: #9C9;
+  font-size: 14px;
+  color: #fff;
+}
+.popup-form{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.8);
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  z-index: 99;
+  overflow: hidden;
+}
+.form-container{
+  width: 300px;
+  height: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 20px 25px;
+}
+form{
+  text-align: left;
+}
+label{
+  text-align: left;
+  font-size: 12px;
+}
+input[type="text"], input[type="number"], select, option{
+  width: 100%;
+  font-size: 15px;
+}
+input[type="submit"]{
+    height: 50px;
+    width: 100%;
+    background-color: #5c7eff;
+    font-weight: bolder;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 6px 10px 10px 9px;
+  margin-top: 12px;
+}
 /******************/
 
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .form-container{
+    width: 80%;
+  }
   .m-hidden {
     display: block !important;
   }
@@ -526,6 +630,7 @@ Loader CSS
     border-radius: 10px;
     font-size: 14px;
     margin: 6px 10px 10px 9px;
+     
   }
   #ghost-btn-mobile{
     grid-area: contact;
@@ -550,7 +655,17 @@ Loader CSS
     grid-template-rows: 50vh 50vh;
     height: 90vh;
   }
-
+  .content-divider-why{
+    padding-bottom: 10vh;
+  }
+  .why-us{
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    margin-top: 15vh;
+  }
   .hero-image{
     width: 100vw;
     height: 50vh;
