@@ -13,19 +13,24 @@
       href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
-    <script
-      src="https://360player.io/static/dist/scripts/embed.js"
-      async
-    ></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="../static/assets/jquery.touchSlider.js"></script>
-    <script src="//cdn.jsdelivr.net/jquery.event.drag/2.2/jquery.event.drag.min.js"></script>
+
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/owl.carousel.min.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/owl.theme.default.min.css')}}"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../static/js/owl.carousel.min.js"></script>
+
     <script>
       //Preloader
       $(window).on("load", function() {
@@ -134,7 +139,7 @@
       <div class="why-us">
         <div class="why">
           <div class="icon">
-            <i class="large material-icons">insert_chart</i>
+            <i class="large material-icons-outlined">account_balance</i>
           </div>
           <div class="why-text">
             This is why Lorem Ipsum This is why Lorem Ipsum This is why Lorem
@@ -143,13 +148,13 @@
         </div>
         <div class="why">
           <div class="icon">
-            <i class="large material-icons">insert_chart</i>
+            <i class="large material-icons-outlined">account_balance_wallet</i>
           </div>
           <div class="why-text">This is why Lorem Ipsum</div>
         </div>
         <div class="why">
           <div class="icon">
-            <i class="large material-icons">insert_chart</i>
+            <i class="large material-icons-outlined">touch_app</i>
           </div>
           <div class="why-text">This is why Lorem Ipsum</div>
         </div>
@@ -251,17 +256,147 @@
       </div>
       <div class="projects-button-wrapper"></div>
     </section>
-    <section></section>
+    <section>
+      <div class="wrapper">
+        <div
+          class="testimonial-carousel section-padding owl-carousel owl-theme"
+        >
+          <div class="single-testi">
+            <div class="testi-image">
+              <img src="../static/assets/Bala.png" alt="" />
+            </div>
+            <div class="testi-title">Testimonials 1</div>
+            <div class="testi-desc">
+              <p>This is demo testimonial</p>
+            </div>
+            <div class="testi-logo">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="single-testi">
+            <div class="testi-image">
+              <img src="../static/assets/innov83.jpg" alt="" />
+            </div>
+            <div class="testi-title">Testimonials 2</div>
+            <div class="testi-desc">
+              <p>This is demo testimonial</p>
+            </div>
+            <div class="testi-logo">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="single-testi">
+            <div class="testi-image">
+              <img src="../static/assets/innov83.jpg" alt="" />
+            </div>
+            <div class="testi-title">Testimonials 3</div>
+            <div class="testi-desc">
+              <p>This is demo testimonial</p>
+            </div>
+            <div class="testi-logo">
+              <img src="" alt="" />
+            </div>
+          </div>
+
+          <div class="single-testi">
+            <div class="testi-image">
+              <img src="../static/assets/innov83.jpg" alt="" />
+            </div>
+            <div class="testi-title">Testimonials 3</div>
+            <div class="testi-desc">
+              <p>This is demo testimonial</p>
+            </div>
+            <div class="testi-logo">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="single-testi">
+            <div class="testi-image">
+              <img src="../static/assets/innov83.jpg" alt="" />
+            </div>
+            <div class="testi-title">Testimonials 3</div>
+            <div class="testi-desc">
+              <p>This is demo testimonial</p>
+            </div>
+            <div class="testi-logo">
+              <img src="" alt="" />
+            </div>
+          </div>
+          <div class="single-testi">
+            <div class="testi-image">
+              <img src="../static/assets/innov83.jpg" alt="" />
+            </div>
+            <div class="testi-title">Testimonials 3</div>
+            <div class="testi-desc">
+              <p>This is demo testimonial</p>
+            </div>
+            <div class="testi-logo">
+              <img src="" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section></section>
 
     <footer>
-      <div class="footer-div">
-        <div id="footer-logo">
-          <img src="../static/assets/logo.png" />
+      <div class="footer-container">
+        <div class="footer-company footer-elements">
+          <div class="f-logo">
+            <img src="../static/assets/logo2.png" alt="" />
+          </div>
+          <div class="f-link">
+            <ul>
+              <li>Home</li>
+              <li>Products</li>
+              <li>Projects</li>
+            </ul>
+          </div>
+          <div class="f-copy">Copy right</div>
         </div>
-        <div id="quick-link">link</div>
-        <div id="form">form</div>
+        <div class="footer-address footer-elements">
+          <div class="f-location">Delhi</div>
+          <div class="f-number">8390188283</div>
+          <div class="emai">info@scalex.in</div>
+        </div>
+        <div class="footer-social footer-elements">
+          <div class="f-about">
+            <h4>about the Company</h4>
+          </div>
+          <div class="f-desc">
+            <p></p>
+          </div>
+          <div class="f-social">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script>
+      $(".testimonial-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+    </script>
   </body>
 </html>

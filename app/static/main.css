@@ -55,6 +55,11 @@ html {
 .material-icons {
   font-size: 60px !important;
 }
+
+.material-icons-outlined {
+  font-size: 60px !important;
+}
+
 /* 
 zoom animation on hero image
 */
@@ -594,7 +599,7 @@ input[type="submit"] {
   padding: 6px 10px 10px 9px;
   margin-top: 12px;
 }
-/******************/
+/**********Mobile View********/
 
 @media (min-width: 320px) and (max-width: 480px) {
   .form-container {
@@ -813,7 +818,65 @@ input[type="submit"] {
     width: auto;
     margin: 7px;
   }
-  /* footer{
-    display: none;
-  } */
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-style: solid;
+  }
+}
+
+/***********Testinomials**************/
+.single-testi {
+  border-style: solid;
+  padding: 10%;
+  text-align: center;
+}
+.wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+.testimonial-carousal {
+  margin: 5% auto 0;
+}
+
+.section-padding {
+  padding: 60px 0;
+}
+.testi-image {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin-left: 0 auto;
+  overflow: hidden;
+  margin-left: 31%;
+  margin-bottom: 10px;
+}
+.testi-image img {
+  width: 100%;
+  height: 100px;
+}
+
+/****************FOOTER********************/
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-style: solid;
+  justify-content: space-around;
+  background-color: #2a2c2f;
+}
+
+.footer-elements {
+  border-style: solid;
+  height: auto;
+}
+.f-link ul {
+  text-decoration: none;
+  display: inline-flex;
+  list-style: none;
+
+  color: white;
 }
