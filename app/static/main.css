@@ -56,7 +56,7 @@ html {
   font-size: 60px !important;
 }
 
-.material-icons-outlined {
+.why-icon {
   font-size: 60px !important;
 }
 
@@ -879,4 +879,77 @@ input[type="submit"] {
   list-style: none;
 
   color: white;
+}
+
+/******************Form Overlay Effect*********************/
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 6; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#product-detail-overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: auto; /* Full height (cover the whole page) */
+  top: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: whitesmoke;
+  z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.info-wrap {
+  position: absolute;
+  top: 20%;
+  margin: 0 3%;
+  background-color: whitesmoke;
+}
+.close {
+  margin-left: 94%;
+}
+
+.owl-nav {
+  color: #0071c0;
+  font-size: -webkit-xxx-large;
+}
+
+.owl-next {
+  position: absolute;
+  top: 90%;
+  font-size: -webkit-xxx-large;
+  right: 8px;
+  color: coral;
+}
+.owl-prev {
+  position: absolute;
+  top: 90%;
+  font-size: -webkit-xxx-large;
+  left: 8px;
+  color: coral;
+}
+
+.p-close {
+  margin-left: 94%;
+  padding-bottom: 0px;
+  margin-top: 1em;
+  font-size: small;
+  font-weight: bold;
+  color: crimson;
+}
+
+.product-container {
+  margin: 30px;
 }

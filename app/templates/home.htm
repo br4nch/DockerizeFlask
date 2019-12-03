@@ -139,7 +139,9 @@
       <div class="why-us">
         <div class="why">
           <div class="icon">
-            <i class="large material-icons-outlined">account_balance</i>
+            <i class="large material-icons-outlined why-icon"
+              >account_balance</i
+            >
           </div>
           <div class="why-text">
             This is why Lorem Ipsum This is why Lorem Ipsum This is why Lorem
@@ -148,31 +150,33 @@
         </div>
         <div class="why">
           <div class="icon">
-            <i class="large material-icons-outlined">account_balance_wallet</i>
+            <i class="large material-icons-outlined why-icon"
+              >account_balance_wallet</i
+            >
           </div>
           <div class="why-text">This is why Lorem Ipsum</div>
         </div>
         <div class="why">
           <div class="icon">
-            <i class="large material-icons-outlined">touch_app</i>
+            <i class="large material-icons-outlined why-icon">touch_app</i>
           </div>
           <div class="why-text">This is why Lorem Ipsum</div>
         </div>
         <div class="why">
           <div class="icon">
-            <i class="large material-icons">insert_chart</i>
+            <i class="large material-icons why-icon">insert_chart</i>
           </div>
           <div class="why-text">This is why Lorem Ipsum</div>
         </div>
         <div class="why">
           <div class="icon">
-            <i class="large material-icons">insert_chart</i>
+            <i class="large material-icons why-icon">insert_chart</i>
           </div>
           <div class="why-text">This is why Lorem Ipsum</div>
         </div>
         <div class="why">
           <div class="icon">
-            <i class="large material-icons">insert_chart</i>
+            <i class="large material-icons why-icon">insert_chart</i>
           </div>
           <div class="why-text">This is why Lorem Ipsum</div>
         </div>
@@ -195,6 +199,51 @@
       </div>
     </section>
     <section class="products-wrapper fade">
+      <div class="" id="product-detail-overlay">
+        <div class="p-close" onclick="closeproduct()">X</div>
+        <div class="master-product-conatiner owl-carousel owl-theme">
+          <div class="product-container">
+            <div class="p-image">
+              <img src="../static/assets/corporate.jpg" alt="" />
+            </div>
+            <div class="p-heading"><h4>Corporate Spaces</h4></div>
+            <div class="p-desc">
+              <p>
+                Conceptualizing spaces for businesses, prioritizing
+                functionality and safety without sacrificing style or
+                aesthetics.
+              </p>
+              <i class="material-icons-outlined">insert_chart</i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="p-image">
+              <img src="../static/assets/corporate.jpg" alt="" />
+            </div>
+            <div class="p-heading"><h4>Retail Spaces</h4></div>
+            <div class="p-desc">
+              <p>We have content-divider-heading</p>
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="p-image">
+              <img src="../static/assets/corporate.jpg" alt="" />
+            </div>
+            <div class="p-heading"><h4>Personal Living</h4></div>
+            <div class="p-desc">
+              <p>We have content-divider-heading</p>
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="product-wrapper-div">
         <div class="main-product clickable-product">
           <h3 class="corporate-spaces">
@@ -337,7 +386,74 @@
         </div>
       </div>
     </section>
-    <section></section>
+    <div id="overlay">
+      <div class="info-wrap" style="">
+        <form>
+          <button onclick="off()" type="button" class="close">X</button>
+          <h3 class="request-callback">Get A Callback</h3>
+          <div class="input-group">
+            <input
+              id="name-input"
+              aria-describedby="sizing-addon2"
+              type="text"
+              placeholder="Full Name"
+              required="required"
+              maxlength="120"
+              name="name"
+              class="form-control"
+            />
+          </div>
+          <span class="help is-danger" style="display: none;"></span>
+          <div class="input-group">
+            <input
+              aria-describedby="sizing-addon2"
+              type="email"
+              placeholder="Email Address"
+              required="required"
+              maxlength="50"
+              name="email"
+              class="form-control"
+            />
+          </div>
+          <span class="help is-danger" style="display: none;"></span>
+          <div class="input-group">
+            <span id="sizing-addon2" class="input-group-addon">+91</span>
+            <input
+              aria-describedby="sizing-addon2"
+              type="tel"
+              placeholder="Phone Number"
+              required="required"
+              minlength="10"
+              name="phone"
+              class="form-control"
+            />
+          </div>
+          <span class="help is-danger" style="display: none;"></span>
+          <div class="input-group locandpoi">
+            <select name="location_" class="loc">
+              <option value="" disabled="disabled" selected="selected"
+                >Select Product</option
+              >
+            </select>
+            <select name="poi" required="required" class="poi"></select>
+          </div>
+          <input type="hidden" id="web_location" data-id="/" />
+          <button
+            id="proceed"
+            disabled="disabled"
+            type="submit"
+            class="btn innov8-solid"
+          >
+            Get Quote
+            <img height="1" width="1" alt="" src="" style="display: none;" />
+          </button>
+          <p>
+            By clicking the above Get Quote button, you agree to our
+            <a href="/terms/">Terms &amp; Conditions.</a>
+          </p>
+        </form>
+      </div>
+    </div>
 
     <footer>
       <div class="footer-container">
@@ -396,6 +512,43 @@
             items: 3
           }
         }
+      });
+
+      function displayPopUpForm() {
+        document.getElementById("overlay").style.display = "block";
+      }
+
+      function off() {
+        document.getElementById("overlay").style.display = "none";
+      }
+      function closeproduct() {
+        document.getElementById("product-detail-overlay").style.display =
+          "none";
+      }
+      $(".clickable-product").click(function() {
+        $("#product-detail-overlay").css("display", "block");
+
+        var carousel = $(".master-product-conatiner");
+        carousel.owlCarousel({
+          loop: true,
+          margin: 0,
+          nav: true,
+          dots: false,
+
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 1
+            },
+            1000: {
+              items: 1
+            }
+          }
+        });
+
+        carousel.trigger("to.owl.carousel", 2);
       });
     </script>
   </body>
