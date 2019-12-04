@@ -84,7 +84,7 @@
       </div>
       <div>
         <div id="menu" class="menu">
-          <a id="product">Products</a>
+          <a id="product">Services</a>
           <a id="project">Projects</a>
           <a id="whyus">Why Us</a>
 
@@ -97,7 +97,7 @@
 
         <div id="form-wrapper">
           <h1 class="hero-text">
-            Redefining workspaces and home interiors
+            Redefining Workspaces and Home Interiors
           </h1>
           <p class="subtext">
             We are a Design and Build Company
@@ -190,7 +190,7 @@
         <div class="foreground">
           <h1>
             <div class="dash"></div>
-            Our Products
+            Our Services
           </h1>
         </div>
       </div>
@@ -492,64 +492,6 @@
       </div>
     </footer>
 
-    <script>
-      $(".testimonial-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: false,
-
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true,
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 1
-          },
-          1000: {
-            items: 3
-          }
-        }
-      });
-
-      function displayPopUpForm() {
-        document.getElementById("overlay").style.display = "block";
-      }
-
-      function off() {
-        document.getElementById("overlay").style.display = "none";
-      }
-      function closeproduct() {
-        document.getElementById("product-detail-overlay").style.display =
-          "none";
-      }
-      $(".clickable-product").click(function() {
-        $("#product-detail-overlay").css("display", "block");
-
-        var carousel = $(".master-product-conatiner");
-        carousel.owlCarousel({
-          loop: true,
-          margin: 0,
-          nav: true,
-          dots: false,
-
-          responsive: {
-            0: {
-              items: 1
-            },
-            600: {
-              items: 1
-            },
-            1000: {
-              items: 1
-            }
-          }
-        });
-
-        carousel.trigger("to.owl.carousel", 2);
-      });
-    </script>
+    <script src="../static/js/main.js"></script>
   </body>
 </html>

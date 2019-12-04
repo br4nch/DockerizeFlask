@@ -7,6 +7,9 @@ html {
 .m-hidden {
   display: none !important;
 }
+h1 {
+  font: Russo One;
+}
 .hero {
   display: grid;
   grid-template-areas: "image herotext";
@@ -107,7 +110,7 @@ zoom animation on hero image
 .hero-image {
   -webkit-animation: zoom 100s; /* Chrome, Safari, Opera */
   animation: zoom 50s;
-  width: 1000px;
+
   height: 800px;
   margin-left: -2%;
 }
@@ -655,11 +658,11 @@ input[type="submit"] {
     height: 90vh;
   }
   .content-divider-why {
-    padding-bottom: 10vh;
+    padding-bottom: 31vh;
   }
   .why-us {
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     text-align: center;
     margin: auto;
     width: 100%;
