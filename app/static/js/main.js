@@ -20,17 +20,35 @@ $(".testimonial-carousel").owlCarousel({
 });
 
 function displayPopUpForm() {
-  document.getElementById("overlay").style.display = "block";
+  $('#overlay').fadeIn('fast')
+  if ($(window).width() < 480) {
+    $('.bottom-fix-bar').css('transform','translateY(100%)')
+  }
 }
 
 function off() {
-  document.getElementById("overlay").style.display = "none";
+  $('#overlay').fadeOut('fast')
+  if ($(window).width() < 480) {
+    $('.bottom-fix-bar').css('transform','translateY(0%)')
+  }
 }
+
 function closeproduct() {
-  document.getElementById("product-detail-overlay").style.display = "none";
+  $('#product-detail-overlay').fadeOut('fast')
+  // document.getElementById("product-detail-overlay").style.display = "none";
+  if ($(window).width() < 480) {
+    $('.bottom-fix-bar').css('transform','translateY(0%)')
+  }
 }
+
 $(".clickable-product").click(function() {
-  $("#product-detail-overlay").css("display", "block");
+  $('#product-detail-overlay').fadeIn('fast')
+
+  // $("#product-detail-overlay").css("display", "block");
+
+  if ($(window).width() < 480) {
+    $('.bottom-fix-bar').css('transform','translateY(100%)')
+  }
 
   var carousel = $(".master-product-conatiner");
   carousel.owlCarousel({

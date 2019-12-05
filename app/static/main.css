@@ -479,7 +479,31 @@ a {
   display: grid;
   grid-area: form;
 }
-
+.input-group input, .input-group select{
+  margin: 24px auto;
+  box-sizing: border-box;
+  background-color: transparent;
+  line-height: 24px;
+  padding: 12px 16px;
+  display: block;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 5px;
+}
+.input-group select{
+  height: 48px;
+  color: rgba(0,0,0,.54);
+}
+#proceed{
+  height: 50px;
+  margin-left: calc(30% - 20px);
+  width: 185px;
+  background-color: #5c7eff;
+  font-weight: bolder;
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 15px;
+}
 /*
 Loader CSS
 */
@@ -579,6 +603,16 @@ Loader CSS
 }
 form {
   text-align: left;
+  padding: 22px;
+}
+form .request-callback{
+  text-align: center;
+  color: #363f60;
+  font-size: 20px;
+}
+.tnc-form, .tnc-form a{
+  font-size: 10px;
+  margin-top: 18px;
 }
 label {
   text-align: left;
@@ -586,10 +620,21 @@ label {
 }
 input[type="text"],
 input[type="number"],
+input[type="email"],
+input[type="tel"],
 select,
 option {
   width: 100%;
   font-size: 15px;
+}
+input{
+  outline: none;
+  border: none;
+}
+select{
+  outline: none;
+  border: none;
+  background: transparent;
 }
 input[type="submit"] {
   height: 50px;
@@ -602,6 +647,175 @@ input[type="submit"] {
   padding: 6px 10px 10px 9px;
   margin-top: 12px;
 }
+
+/***********Testinomials**************/
+.single-testi {
+  border-style: solid;
+  padding: 10%;
+  text-align: center;
+}
+.wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+.testimonial-carousal {
+  margin: 5% auto 0;
+}
+
+.section-padding {
+  padding: 60px 0;
+}
+.testi-image {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin-left: 0 auto;
+  overflow: hidden;
+  margin-left: 31%;
+  margin-bottom: 10px;
+}
+.testi-image img {
+  width: 100%;
+  height: 100px;
+}
+
+/****************FOOTER********************/
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-style: solid;
+  justify-content: space-around;
+  background-color: #2a2c2f;
+}
+
+.footer-elements {
+  border-style: solid;
+  height: auto;
+}
+.f-link ul {
+  text-decoration: none;
+  display: inline-flex;
+  list-style: none;
+
+  color: white;
+}
+
+/******************Form Overlay Effect*********************/
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 6; /* Specify a stack order in case you're using a different order for other elements */
+  /* cursor: pointer;  */
+}
+
+#product-detail-overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: auto; /* Full height (cover the whole page) */
+  top: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: whitesmoke;
+  z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+  /* cursor: pointer; */
+}
+
+.info-wrap {
+  position: absolute;
+  top: 15%;
+  margin: 0 5%;
+  background-color: whitesmoke;
+  width: 30%;
+}
+.close {
+  margin-left: 94%;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.owl-nav {
+  color: #0071c0;
+  font-size: -webkit-xxx-large;
+}
+.owl-nav button{
+  outline: none;
+  background: transparent;
+}
+.owl-next {
+  position: absolute;
+  top: 90%;
+  font-size: -webkit-xxx-large;
+  right: 8px;
+  color: coral;
+}
+.owl-prev {
+  position: absolute;
+  top: 90%;
+  font-size: -webkit-xxx-large;
+  left: 8px;
+  color: coral;
+}
+
+.p-close {
+  position: absolute;
+  z-index: 999;
+  cursor: pointer;
+  right: 25px;
+  margin-top: 20px;
+  font-size: medium;
+  font-weight: bold;
+  color: rgb(0,0,0,0.6);
+}
+
+.product-container {
+  padding: 30px;
+  display: grid;
+  grid-template-areas:
+      'pic prod-head'
+      'pic prod-cont';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 12vh 82vh;
+}
+.p-image{
+  grid-area: pic;
+  padding: 15px;
+}
+.p-heading{
+  grid-area: prod-head;
+  
+}
+.p-heading h4{
+  font-size: 40px;
+  font-weight: 900;
+  margin: 25px 0px;
+  text-align: center;
+}
+.p-desc{
+  grid-area: prod-cont;
+  padding: 10px 20px 10px 10px;
+}
+.owl-nav{
+  top: 45%;
+  position: absolute;
+  cursor: pointer;
+} 
+.owl-next{
+  left: 97vw;
+}
+
 /**********Mobile View********/
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -622,6 +836,7 @@ input[type="submit"] {
     border-top: 1px solid #e8e8e8;
     background: white;
     z-index: 999;
+    transition: 0.3s;
   }
   #cta-btn-mobile {
     grid-area: get-quote;
@@ -828,131 +1043,67 @@ input[type="submit"] {
     flex-wrap: wrap;
     border-style: solid;
   }
-}
 
-/***********Testinomials**************/
-.single-testi {
-  border-style: solid;
-  padding: 10%;
-  text-align: center;
-}
-.wrapper {
-  width: 1170px;
-  margin: 0 auto;
-}
-.testimonial-carousal {
-  margin: 5% auto 0;
-}
+  .info-wrap {
+    top: 5%;
+    width: 91%;
+  }
+  #proceed{
+    margin-left: 24%;
+    height: 45px;
+    width: 160px;
+  }
+  form {
+    padding: 15px;
+  }
+  .input-group input, .input-group select {
+    margin: 18px auto;
+    line-height: 18px;
+    padding: 12px 14px;
+  }
+  form .request-callback {
+    font-size: 18px;
+  }
+  input[type="text"], input[type="number"], input[type="email"], input[type="tel"], select, option {
+    font-size: 13px;
+  }
 
-.section-padding {
-  padding: 60px 0;
-}
-.testi-image {
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  display: block;
-  margin-left: 0 auto;
-  overflow: hidden;
-  margin-left: 31%;
-  margin-bottom: 10px;
-}
-.testi-image img {
-  width: 100%;
-  height: 100px;
-}
+  .product-container{
+    padding: 30px 12px 12px 12px;
+    display: grid;
+    grid-template-areas:
+        'pic'
+        'prod-head'
+        'prod-cont';
+    grid-template-columns: 100%;
+    grid-template-rows: 30vh 6vh 60vh;
+  }
+  .p-close {
+    right: 11px;
+    margin-top: 7px;
+    font-size: small;
+  }
+  .owl-nav button{
+    font-size: 35px !important;
+  }
+  .owl-nav {
+    margin-left: -8px;
+  }
+  .p-heading, .p-desc{
+    margin: 0px 10px 0px 10px;
+  }
+  .p-desc{
+    padding: 0px;
+    font-size: 13px;
+  }
+  .p-heading h4 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0px;
+    text-align: left;
+  }
+  .p-image {
+    padding: 0px;
+  }
 
-/****************FOOTER********************/
-.footer-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  border-style: solid;
-  justify-content: space-around;
-  background-color: #2a2c2f;
-}
-
-.footer-elements {
-  border-style: solid;
-  height: auto;
-}
-.f-link ul {
-  text-decoration: none;
-  display: inline-flex;
-  list-style: none;
-
-  color: white;
-}
-
-/******************Form Overlay Effect*********************/
-
-#overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-  z-index: 6; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-}
-
-#product-detail-overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  height: auto; /* Full height (cover the whole page) */
-  top: 0%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: whitesmoke;
-  z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-}
-
-.info-wrap {
-  position: absolute;
-  top: 20%;
-  margin: 0 3%;
-  background-color: whitesmoke;
-}
-.close {
-  margin-left: 94%;
-}
-
-.owl-nav {
-  color: #0071c0;
-  font-size: -webkit-xxx-large;
-}
-
-.owl-next {
-  position: absolute;
-  top: 90%;
-  font-size: -webkit-xxx-large;
-  right: 8px;
-  color: coral;
-}
-.owl-prev {
-  position: absolute;
-  top: 90%;
-  font-size: -webkit-xxx-large;
-  left: 8px;
-  color: coral;
-}
-
-.p-close {
-  margin-left: 94%;
-  padding-bottom: 0px;
-  margin-top: 1em;
-  font-size: small;
-  font-weight: bold;
-  color: crimson;
-}
-
-.product-container {
-  margin: 30px;
 }
