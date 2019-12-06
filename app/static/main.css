@@ -1031,10 +1031,12 @@ input[type="submit"] {
     padding-left: 0%;
     text-align: center;
     font-size: 1.5em;
-    margin-top: calc((54vh - 0px) / 2);
+    /* margin-top: calc((54vh - 0px) / 2); */
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: dimgray;
+    /* position: absolute; */
+    margin-top: 58%;
   }
   .personal-text,
   .rent-ready-container h3,
@@ -1194,4 +1196,36 @@ input[type="submit"] {
   .testi-logo img {
     width: 120px !important;
   } 
+}
+/**********M hidden new css************/
+@media (max-width: 480px) and (min-width: 320px) {
+  .bottom-fix-bar {
+    display: grid !important;
+    grid-template-areas: "btn1 btn2";
+    grid-template-columns: 50vw 50vw;
+  }
+  .bottom-fix-bar > div {
+    width: 50vw;
+  }
+  .bottom-fix-bar > div:first-child {
+    background-color: #5c7eff;
+    color: white;
+    padding-top: 18px;
+  }
+  .bottom-fix-bar > div {
+    background-color: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .blank {
+    height: 60px;
+    width: 50vw;
+    color: #5c7eff;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    outline: none;
+    font-size: 16px;
+  }
 }
