@@ -1273,6 +1273,16 @@ footer {
     font-size: 13px;
   }
 
+  .pr-short-desc {
+    text-align: center;
+  }
+  .pr-short-desc i {
+    float: left;
+  }
+  .pr-short-desc h4 {
+    width: 83%;
+  }
+
   .product-container {
     padding: 40px 18px 12px 18px;
     display: grid;
@@ -1285,6 +1295,7 @@ footer {
   }
 
   .project-container {
+    overflow: scroll;
     padding: 40px 18px 12px 18px;
     display: grid;
     grid-template-areas:
@@ -1292,7 +1303,7 @@ footer {
       "prod-head"
       "prod-cont";
     grid-template-columns: 100%;
-    grid-template-rows: 30vh 6vh 60vh;
+    grid-template-rows: 37vh 6vh 45vh;
   }
   .p-close {
     right: 18px;
@@ -1312,6 +1323,9 @@ footer {
   .p-desc {
     padding: 0px;
     font-size: 13px;
+  }
+  .p-desc :nth-child(1) {
+    font-style: italic;
   }
   .p-heading h4 {
     font-size: 22px;
