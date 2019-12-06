@@ -994,7 +994,7 @@ input[type="submit"] {
     padding-left: 0%;
     text-align: center;
     font-size: 1.5em;
-    margin-top: calc((61vh - 47px) / 2);
+    margin-top: calc((54vh - 0px) / 2);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: dimgray;
