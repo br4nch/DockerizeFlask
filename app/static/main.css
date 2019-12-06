@@ -1094,7 +1094,7 @@ input[type="submit"] {
   }
 
   .product-container {
-    padding: 30px 12px 12px 12px;
+    padding: 40px 18px 12px 18px;
     display: grid;
     grid-template-areas:
       "pic"
@@ -1104,9 +1104,9 @@ input[type="submit"] {
     grid-template-rows: 30vh 6vh 60vh;
   }
   .p-close {
-    right: 11px;
-    margin-top: 7px;
-    font-size: small;
+    right: 18px;
+    margin-top: 14px;
+    font-size: medium;
   }
   .owl-nav button {
     font-size: 35px !important;
