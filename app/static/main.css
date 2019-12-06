@@ -428,7 +428,7 @@ a {
 
 .tile1 {
   grid-area: project1;
-  background-image: url(assets/tile3.jpg);
+  background-image: url(assets/innov83.jpg);
   margin-left: 30%;
 }
 
@@ -441,25 +441,25 @@ a {
 .tile3 {
   grid-area: project3;
   margin-left: 10%;
-  background-image: url(assets/pl3.jpg);
+  background-image: url(assets/payu1.jpg);
   margin-bottom: 20%;
 }
 
 .tile4 {
   grid-area: project4;
   margin-left: 30%;
-  background-image: url(assets/innov83.jpg);
+  background-image: url(assets/renewbuy_1.jpeg);
 }
 
 .tile5 {
   grid-area: project5;
   margin-left: 20%;
-  background-image: url(assets/payu1.jpg);
+  background-image: url(assets/personal_living.jpg);
 }
 .tile6 {
   grid-area: project6;
   margin-left: 10%;
-  background-image: url(assets/wpj1.jpg);
+  background-image: url(assets/rent_ready2.jpg);
 }
 
 .footer-div {
@@ -562,7 +562,8 @@ Loader CSS
   background-color: white;
   z-index: 999999;
 }
-.clickable-product {
+.clickable-product,
+.clickable-project {
   cursor: pointer;
 }
 
@@ -661,10 +662,10 @@ input[type="submit"] {
   position: relative;
   display: grid;
   grid-template-areas:
-      'test-img'
-      'designation'
-      'comment'
-      'comp-logo';
+    "test-img"
+    "designation"
+    "comment"
+    "comp-logo";
   grid-template-rows: 15vh 5vh 15vh 7vh;
   height: 42vh;
   width: 27vw;
@@ -696,25 +697,25 @@ input[type="submit"] {
   /* margin-left: 31%; */
   margin-bottom: 10px;
 }
-.testi-title{
+.testi-title {
   grid-area: designation;
   font-weight: 500;
 }
-.testi-desc{
+.testi-desc {
   grid-area: comment;
   padding: 15px;
   text-align: center;
-  color: rgb(0,0,0,0.8);
+  color: rgb(0, 0, 0, 0.8);
   font-weight: 300;
   font-size: 14px;
 }
-.testi-desc p{
+.testi-desc p {
   margin: 0px;
 }
-.testi-logo{
+.testi-logo {
   grid-area: comp-logo;
 }
-.testi-logo img{
+.testi-logo img {
   width: 150px !important;
   height: auto;
   margin-left: auto;
@@ -852,6 +853,20 @@ footer {
   /* cursor: pointer; */
 }
 
+#project-detail-overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: auto; /* Full height (cover the whole page) */
+  top: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: whitesmoke;
+  z-index: 5; /* Specify a stack order in case you're using a different order for other elements */
+  /* cursor: pointer; */
+}
+
 .info-wrap {
   position: absolute;
   top: 15%;
@@ -910,6 +925,17 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 12vh 82vh;
 }
+
+.project-container {
+  padding: 30px;
+  display: grid;
+  grid-template-areas:
+    "pic prod-head"
+    "pic prod-cont";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 12vh 82vh;
+}
+
 .p-image {
   grid-area: pic;
   padding: 15px;
@@ -936,13 +962,31 @@ footer {
   left: 97vw;
 }
 
+.project-desc {
+  font-size: 2em;
+  color: whitesmoke;
+  position: absolute;
+  bottom: 3%;
+  left: 11%;
+  font-weight: 400;
+}
+
 /**********Mobile View********/
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .project-desc {
+    font-size: 12px;
+    color: whitesmoke;
+    position: absolute;
+    bottom: 3px;
+    left: 17px;
+    font-weight: 800;
+  }
+
   .f-copy {
     font-size: smaller;
     color: gray;
-    margin-left: 8em;
+    margin-left: 0%;
   }
   .form-container {
     width: 80%;
@@ -1178,6 +1222,7 @@ footer {
     flex-direction: column;
     flex-wrap: wrap;
     border-style: solid;
+    text-align: center;
   }
 
   .info-wrap {
@@ -1222,6 +1267,17 @@ footer {
     grid-template-columns: 100%;
     grid-template-rows: 30vh 6vh 60vh;
   }
+
+  .project-container {
+    padding: 40px 18px 12px 18px;
+    display: grid;
+    grid-template-areas:
+      "pic"
+      "prod-head"
+      "prod-cont";
+    grid-template-columns: 100%;
+    grid-template-rows: 30vh 6vh 60vh;
+  }
   .p-close {
     right: 18px;
     margin-top: 14px;
@@ -1255,13 +1311,13 @@ footer {
     height: 290px;
     width: 95vw;
   }
-  .testi-title{
+  .testi-title {
     font-size: 14px;
   }
   .testi-image {
     border: 1px solid #eee;
   }
-  .testi-image{
+  .testi-image {
     height: 80px;
     width: 80px;
   }
@@ -1275,8 +1331,8 @@ footer {
   }
   .testi-logo img {
     width: 120px !important;
-  } 
-  .foreground{
+  }
+  .foreground {
     height: 0px;
   }
 }
@@ -1311,4 +1367,16 @@ footer {
     outline: none;
     font-size: 16px;
   }
+}
+
+.small-dash {
+  position: absolute;
+  width: 2em;
+  height: 0;
+  color: white;
+  float: left;
+  /* top: 3em; */
+  bottom: 32%;
+  left: 12%;
+  border-style: solid;
 }
