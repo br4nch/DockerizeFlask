@@ -426,6 +426,11 @@ a {
   filter: brightness(1);
 }
 
+.product-desc-list {
+  list-style: none;
+  padding: 0;
+}
+
 .tile1 {
   grid-area: project1;
   background-image: url(assets/innov83.jpg);
@@ -974,6 +979,17 @@ footer {
 /**********Mobile View********/
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .product-desc-list {
+    list-style: none;
+    padding: 0;
+  }
+  .product-desc-list li h4 {
+    margin: 0;
+    float: left;
+  }
+  .product-desc-list li {
+    line-height: 2;
+  }
   .project-desc {
     font-size: 12px;
     color: whitesmoke;
@@ -1265,7 +1281,7 @@ footer {
       "prod-head"
       "prod-cont";
     grid-template-columns: 100%;
-    grid-template-rows: 30vh 6vh 60vh;
+    grid-template-rows: 42vh 6vh 60vh;
   }
 
   .project-container {
@@ -1306,6 +1322,7 @@ footer {
   .p-image {
     padding: 0px;
   }
+
   .single-testi {
     grid-template-rows: 100px 30px 110px 50px;
     height: 290px;
