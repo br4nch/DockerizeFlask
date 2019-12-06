@@ -30,42 +30,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../static/js/owl.carousel.min.js"></script>
-
-    <script>
-      //Preloader
-      $(window).on("load", function() {
-        preloaderFadeOutTime = 200;
-        function hidePreloader() {
-          var preloader = $(".spinner-wrapper");
-
-          preloader.fadeOut(preloaderFadeOutTime);
-        }
-        hidePreloader();
-      });
-
-      $(window)
-        .scroll(function() {
-          var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-          $(".fade").each(function() {
-            /* Check the location of each desired element */
-            var objectBottom = $(this).offset().top + $(this).outerHeight();
-
-            /* If the element is completely within bounds of the window, fade it in */
-            if (objectBottom < windowBottom) {
-              //object comes into view (scrolling down)
-              if ($(this).css("opacity") == 0) {
-                $(this).fadeTo(500, 1);
-              }
-            } else {
-              //object goes out of view (scrolling up)
-              if ($(this).css("opacity") == 1) {
-                $(this).fadeTo(500, 0);
-              }
-            }
-          });
-        })
-        .scroll();
-    </script>
   </head>
   <body>
     <!--CSS Spinner-->
@@ -84,7 +48,7 @@
       </div>
       <div>
         <div id="menu" class="menu">
-          <a id="product">Services</a>
+          <a id="product">Products</a>
           <a id="project">Projects</a>
           <a id="whyus">Why Us</a>
 
@@ -208,7 +172,7 @@
         <div class="foreground">
           <h1>
             <div class="dash"></div>
-            Our Services
+            Our Products
           </h1>
         </div>
       </div>
@@ -240,6 +204,30 @@
             <div class="p-image">
               <img src="../static/assets/corporate.jpg" alt="" />
             </div>
+            <div class="p-heading"><h4>Personal Living</h4></div>
+            <div class="p-desc">
+              <p>We have content-divider-heading</p>
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="p-image">
+              <img src="../static/assets/corporate.jpg" alt="" />
+            </div>
+            <div class="p-heading"><h4>Rent Ready</h4></div>
+            <div class="p-desc">
+              <p>We have content-divider-heading</p>
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="p-image">
+              <img src="../static/assets/corporate.jpg" alt="" />
+            </div>
             <div class="p-heading"><h4>Retail Spaces</h4></div>
             <div class="p-desc">
               <p>We have content-divider-heading</p>
@@ -252,7 +240,7 @@
             <div class="p-image">
               <img src="../static/assets/corporate.jpg" alt="" />
             </div>
-            <div class="p-heading"><h4>Personal Living</h4></div>
+            <div class="p-heading"><h4>Custom Design</h4></div>
             <div class="p-desc">
               <p>We have content-divider-heading</p>
               <i></i>
@@ -263,21 +251,21 @@
         </div>
       </div>
       <div class="product-wrapper-div">
-        <div class="main-product clickable-product">
+        <div class="main-product clickable-product" data="0">
           <h3 class="corporate-spaces">
             Corporate Spaces
           </h3>
         </div>
-        <div class="personal-living clickable-product">
+        <div class="personal-living clickable-product" data="1">
           <h3 class="personal-text">Personal Living</h3>
         </div>
-        <div class="rent-ready-container clickable-product">
+        <div class="rent-ready-container clickable-product" data="2">
           <h3>Rent Ready</h3>
         </div>
-        <div class="retail-container clickable-product">
+        <div class="retail-container clickable-product" data="3">
           <h3 class="retail-text">Retail Spaces</h3>
         </div>
-        <div class="coming-soon-container clickable-product">
+        <div class="coming-soon-container clickable-product" data="4">
           <h3>Custom Design</h3>
         </div>
       </div>
@@ -299,14 +287,14 @@
         <button class="ghost-btn" onclick="displayPopUpForm()">Contact</button>
       </div>
     </section>
-    <section class="projects-wrapper fade">
+    <section class="projects-wrapper">
       <div class="projects-wrapper-div">
-        <div class="project-tile tile1"></div>
-        <div class="project-tile tile2"></div>
-        <div class="project-tile tile3"></div>
-        <div class="project-tile tile4"></div>
-        <div class="project-tile tile5"></div>
-        <div class="project-tile tile6"></div>
+        <div class="project-tile tile1 fade"></div>
+        <div class="project-tile tile2 fade"></div>
+        <div class="project-tile tile3 fade"></div>
+        <div class="project-tile tile4 fade"></div>
+        <div class="project-tile tile5 fade"></div>
+        <div class="project-tile tile6 fade"></div>
       </div>
     </section>
     <section class="content-divider">

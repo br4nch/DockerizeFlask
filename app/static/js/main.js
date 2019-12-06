@@ -1,3 +1,37 @@
+// Preloader
+$(window).on("load", function() {
+  preloaderFadeOutTime = 200;
+  function hidePreloader() {
+    var preloader = $(".spinner-wrapper");
+
+    preloader.fadeOut(preloaderFadeOutTime);
+  }
+  hidePreloader();
+});
+
+$(window)
+  .scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $(".fade").each(function() {
+      /* Check the location of each desired element */
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+      /* If the element is completely within bounds of the window, fade it in */
+      if (objectBottom <= windowBottom) {
+        //object comes into view (scrolling down)
+        if ($(this).css("opacity") == 0) {
+          $(this).fadeTo(500, 1);
+        }
+      } else {
+        //object goes out of view (scrolling up)
+        if ($(this).css("opacity") == 1) {
+          $(this).fadeTo(500, 0);
+        }
+      }
+    });
+  })
+  .scroll();
+
 $(".testimonial-carousel").owlCarousel({
   loop: true,
   margin: 10,
@@ -70,7 +104,9 @@ $(".clickable-product").click(function() {
     }
   });
 
-  carousel.trigger("to.owl.carousel", 2);
+  console.log($(this).attr("data"));
+
+  carousel.trigger("to.owl.carousel", parseInt($(this).attr("data")));
 });
 
 /////////Function to add data to backend////////
