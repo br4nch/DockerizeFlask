@@ -1191,11 +1191,14 @@ input[type="submit"] {
   .testi-desc {
     padding: 15px;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
   }
   .testi-logo img {
     width: 120px !important;
   } 
+  .foreground{
+    height: 0px;
+  }
 }
 /**********M hidden new css************/
 @media (max-width: 480px) and (min-width: 320px) {
