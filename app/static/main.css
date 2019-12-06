@@ -50,7 +50,7 @@ h1 {
   display: grid;
   grid-template-areas: "one";
   grid-template-columns: 100vw;
-  height: 70vh;
+  /* height: 70vh; */
   margin-top: 0;
   margin-bottom: 10vh;
   text-align: center;
@@ -479,21 +479,22 @@ a {
   display: grid;
   grid-area: form;
 }
-.input-group input, .input-group select{
+.input-group input,
+.input-group select {
   margin: 24px auto;
   box-sizing: border-box;
   background-color: transparent;
   line-height: 24px;
   padding: 12px 16px;
   display: block;
-  border: 1px solid rgba(0,0,0,.12);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 5px;
 }
-.input-group select{
+.input-group select {
   height: 48px;
-  color: rgba(0,0,0,.54);
+  color: rgba(0, 0, 0, 0.54);
 }
-#proceed{
+#proceed {
   height: 50px;
   margin-left: calc(30% - 20px);
   width: 185px;
@@ -605,12 +606,13 @@ form {
   text-align: left;
   padding: 22px;
 }
-form .request-callback{
+form .request-callback {
   text-align: center;
   color: #363f60;
   font-size: 20px;
 }
-.tnc-form, .tnc-form a{
+.tnc-form,
+.tnc-form a {
   font-size: 10px;
   margin-top: 18px;
 }
@@ -627,11 +629,11 @@ option {
   width: 100%;
   font-size: 15px;
 }
-input{
+input {
   outline: none;
   border: none;
 }
-select{
+select {
   outline: none;
   border: none;
   background: transparent;
@@ -735,7 +737,8 @@ input[type="submit"] {
 .info-wrap {
   position: absolute;
   top: 15%;
-  margin: 0 5%;
+  /* margin: 0 5%; */
+  margin-left: 33%;
   background-color: whitesmoke;
   width: 30%;
 }
@@ -750,7 +753,7 @@ input[type="submit"] {
   color: #0071c0;
   font-size: -webkit-xxx-large;
 }
-.owl-nav button{
+.owl-nav button {
   outline: none;
   background: transparent;
 }
@@ -777,42 +780,41 @@ input[type="submit"] {
   margin-top: 20px;
   font-size: medium;
   font-weight: bold;
-  color: rgb(0,0,0,0.6);
+  color: rgb(0, 0, 0, 0.6);
 }
 
 .product-container {
   padding: 30px;
   display: grid;
   grid-template-areas:
-      'pic prod-head'
-      'pic prod-cont';
+    "pic prod-head"
+    "pic prod-cont";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 12vh 82vh;
 }
-.p-image{
+.p-image {
   grid-area: pic;
   padding: 15px;
 }
-.p-heading{
+.p-heading {
   grid-area: prod-head;
-  
 }
-.p-heading h4{
+.p-heading h4 {
   font-size: 40px;
   font-weight: 900;
   margin: 25px 0px;
   text-align: center;
 }
-.p-desc{
+.p-desc {
   grid-area: prod-cont;
   padding: 10px 20px 10px 10px;
 }
-.owl-nav{
+.owl-nav {
   top: 45%;
   position: absolute;
   cursor: pointer;
-} 
-.owl-next{
+}
+.owl-next {
   left: 97vw;
 }
 
@@ -873,7 +875,7 @@ input[type="submit"] {
     height: 90vh;
   }
   .content-divider-why {
-    padding-bottom: 31vh;
+    /* padding-bottom: 31vh; */
   }
   .why-us {
     grid-template-rows: auto;
@@ -1047,8 +1049,9 @@ input[type="submit"] {
   .info-wrap {
     top: 5%;
     width: 91%;
+    margin-left: 5%;
   }
-  #proceed{
+  #proceed {
     margin-left: 24%;
     height: 45px;
     width: 160px;
@@ -1056,25 +1059,32 @@ input[type="submit"] {
   form {
     padding: 15px;
   }
-  .input-group input, .input-group select {
+  .input-group input,
+  .input-group select {
     margin: 18px auto;
+    width: 100%;
     line-height: 18px;
     padding: 12px 14px;
   }
   form .request-callback {
     font-size: 18px;
   }
-  input[type="text"], input[type="number"], input[type="email"], input[type="tel"], select, option {
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  option {
     font-size: 13px;
   }
 
-  .product-container{
+  .product-container {
     padding: 30px 12px 12px 12px;
     display: grid;
     grid-template-areas:
-        'pic'
-        'prod-head'
-        'prod-cont';
+      "pic"
+      "prod-head"
+      "prod-cont";
     grid-template-columns: 100%;
     grid-template-rows: 30vh 6vh 60vh;
   }
@@ -1083,16 +1093,17 @@ input[type="submit"] {
     margin-top: 7px;
     font-size: small;
   }
-  .owl-nav button{
+  .owl-nav button {
     font-size: 35px !important;
   }
   .owl-nav {
     margin-left: -8px;
   }
-  .p-heading, .p-desc{
+  .p-heading,
+  .p-desc {
     margin: 0px 10px 0px 10px;
   }
-  .p-desc{
+  .p-desc {
     padding: 0px;
     font-size: 13px;
   }
@@ -1105,5 +1116,4 @@ input[type="submit"] {
   .p-image {
     padding: 0px;
   }
-
 }

@@ -20,34 +20,34 @@ $(".testimonial-carousel").owlCarousel({
 });
 
 function displayPopUpForm() {
-  $('#overlay').fadeIn('fast')
+  $("#overlay").fadeIn("fast");
   if ($(window).width() < 480) {
-    $('.bottom-fix-bar').css('transform','translateY(100%)')
+    $(".bottom-fix-bar").css("transform", "translateY(100%)");
   }
 }
 
 function off() {
-  $('#overlay').fadeOut('fast')
+  $("#overlay").fadeOut("fast");
   if ($(window).width() < 480) {
-    $('.bottom-fix-bar').css('transform','translateY(0%)')
+    $(".bottom-fix-bar").css("transform", "translateY(0%)");
   }
 }
 
 function closeproduct() {
-  $('#product-detail-overlay').fadeOut('fast')
+  $("#product-detail-overlay").fadeOut("fast");
   // document.getElementById("product-detail-overlay").style.display = "none";
   if ($(window).width() < 480) {
-    $('.bottom-fix-bar').css('transform','translateY(0%)')
+    $(".bottom-fix-bar").css("transform", "translateY(0%)");
   }
 }
 
 $(".clickable-product").click(function() {
-  $('#product-detail-overlay').fadeIn('fast')
+  $("#product-detail-overlay").fadeIn("fast");
 
   // $("#product-detail-overlay").css("display", "block");
 
   if ($(window).width() < 480) {
-    $('.bottom-fix-bar').css('transform','translateY(100%)')
+    $(".bottom-fix-bar").css("transform", "translateY(100%)");
   }
 
   var carousel = $(".master-product-conatiner");
@@ -72,3 +72,28 @@ $(".clickable-product").click(function() {
 
   carousel.trigger("to.owl.carousel", 2);
 });
+
+/////////Function to add data to backend////////
+
+function fillForm() {
+  $.ajax({
+    url: "/api/add-lead/",
+    method: "POST",
+    data: JSON.stringify({
+      name: "venkatesh",
+      email: "venky8283@hotmail.com",
+      phone_no: 8390188283,
+
+      product: "Custom Design",
+      area: 1200,
+      location: "Delhi"
+    }),
+    contentType: "application/json",
+    success: function(data) {
+      console.log(data);
+    },
+    error: function(data) {
+      console.log(data);
+    }
+  });
+}

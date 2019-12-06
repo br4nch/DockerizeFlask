@@ -118,7 +118,9 @@
           <button id="cta-btn-mobile" onclick="displayPopUpForm()">
             Get Quote
           </button>
-          <button id="ghost-btn-mobile">Contact</button>
+          <button id="ghost-btn-mobile">
+            Contact
+          </button>
         </div>
       </div>
     </section>
@@ -144,8 +146,8 @@
             >
           </div>
           <div class="why-text">
-            This is why Lorem Ipsum This is why Lorem Ipsum This is why Lorem
-            Ipsum This is why Lorem Ipsum
+            Each property we create is customised to suit your needs. Each space
+            is created as per your personality!
           </div>
         </div>
         <div class="why">
@@ -154,31 +156,47 @@
               >account_balance_wallet</i
             >
           </div>
-          <div class="why-text">This is why Lorem Ipsum</div>
+          <div class="why-text">
+            We’re a one Stop Solution for all your design requirements!
+          </div>
         </div>
         <div class="why">
           <div class="icon">
             <i class="large material-icons-outlined why-icon">touch_app</i>
           </div>
-          <div class="why-text">This is why Lorem Ipsum</div>
+          <div class="why-text">
+            Over a decade of industry experience and 200+ years of cumulative
+            experience in the designing domain!
+          </div>
         </div>
         <div class="why">
           <div class="icon">
             <i class="large material-icons why-icon">insert_chart</i>
           </div>
-          <div class="why-text">This is why Lorem Ipsum</div>
+          <div class="why-text">
+            <p>
+              We ensure to do our bit to protect our planet - Water-less
+              Urinals, profile designs to prevent splash issues
+            </p>
+          </div>
         </div>
         <div class="why">
           <div class="icon">
             <i class="large material-icons why-icon">insert_chart</i>
           </div>
-          <div class="why-text">This is why Lorem Ipsum</div>
+          <div class="why-text">
+            We ensure to do our bit to protect our planet - Water-less Urinals,
+            profile designs to prevent splash issues
+          </div>
         </div>
         <div class="why">
           <div class="icon">
             <i class="large material-icons why-icon">insert_chart</i>
           </div>
-          <div class="why-text">This is why Lorem Ipsum</div>
+          <div class="why-text">
+            We ensure to do our bit to protect our planet - Water-less Urinals,
+            profile designs to prevent splash issues
+          </div>
         </div>
       </div>
     </section>
@@ -195,7 +213,7 @@
         </div>
       </div>
       <div class="projects-button-wrapper">
-        <button class="ghost-btn">Contact</button>
+        <button class="ghost-btn" onclick="displayPopUpForm()">Contact</button>
       </div>
     </section>
     <section class="products-wrapper fade">
@@ -278,7 +296,7 @@
         </div>
       </div>
       <div class="projects-button-wrapper">
-        <button class="ghost-btn">Contact</button>
+        <button class="ghost-btn" onclick="displayPopUpForm()">Contact</button>
       </div>
     </section>
     <section class="projects-wrapper fade">
@@ -427,27 +445,41 @@
               name="phone"
               class="form-control"
             />
+            <input
+              class="form-control"
+              type="number"
+              placeholder="Square Feet Area"
+            />
           </div>
           <span class="help is-danger" style="display: none;"></span>
+
           <div class="input-group locandpoi">
             <select name="location_" class="loc">
               <option value="" disabled="disabled" selected="selected"
                 >Select Product</option
               >
+
+              <option value="">Corporate Spcaes</option>
+              <option value="">Retail Spaces</option>
+              <option value="">Personal Living</option>
+              <option value="">Rent Ready</option>
+              <option value="">Custom Design</option>
             </select>
-            <select name="poi" required="required" class="poi"></select>
+            <select name="location" required="required" class="poi">
+              <option value="">Delhi NCR</option>
+            </select>
           </div>
           <input type="hidden" id="web_location" data-id="/" />
           <button
             id="proceed"
-            disabled="disabled"
             type="submit"
             class="btn innov8-solid"
+            onclick="fillForm()"
           >
             Get Quote
             <img height="1" width="1" alt="" src="" style="display: none;" />
           </button>
-          <p class='tnc-form'>
+          <p class="tnc-form">
             By clicking the above Get Quote button, you agree to our
             <a href="/terms/">Terms &amp; Conditions.</a>
           </p>

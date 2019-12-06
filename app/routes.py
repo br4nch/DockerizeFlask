@@ -69,15 +69,23 @@ def index():
 
 @app.route('/api/add-lead/', methods=['POST'])
 def add_lead():
-    leads_data = request.json
-    new_lead = Leads()
-    new_lead.full_name = leads_data.get("name")
-    r = new_lead.save()
-    pprint(r)
+    try:
+        leads_data = request.json
+        new_lead = Leads()
+        new_lead.full_name = leads_data.get("name")
+        r = new_lead.save()
+        pprint(r)
+        
 
 
 
-    return {"json": leads_data}
+        return {"json": leads_data,
+        "success":True}
+    except Exception as e:
+
+        print(str(e))
+        return {"json":str(e),
+        "success":True}
 
 
 
