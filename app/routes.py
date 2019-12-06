@@ -1,7 +1,7 @@
 from typing import List, Dict
 import mysql.connector
 import json
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
 from app import db, app
 from datetime import datetime
 from app.sheets_api import GoogleAPI
@@ -62,6 +62,9 @@ class Leads(db.Model):
     def update(self):
         db.session.commit()
 
+@app.route('/sw3.js')
+def sw():
+    return send_file('sw.js')
 
 @app.route('/')
 def index():

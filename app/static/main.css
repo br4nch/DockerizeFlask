@@ -3,6 +3,11 @@ html {
   padding: 0;
   margin: 0;
   font-family: "IBM Plex Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  border: 1px solid #ccc;
 }
 .m-hidden {
   display: none !important;
@@ -849,6 +854,7 @@ input[type="submit"] {
     font-weight: bolder;
     color: white;
     border-radius: 10px;
+    border-style: none;
     font-size: 14px;
     margin: 6px 10px 10px 9px;
   }
@@ -887,7 +893,7 @@ input[type="submit"] {
     margin-top: 15vh;
   }
   .hero-image {
-    width: 100vw;
+    /* width: 100vw; */
     height: 50vh;
     margin-left: -7%;
   }
@@ -988,10 +994,9 @@ input[type="submit"] {
     padding-left: 0%;
     text-align: center;
     font-size: 1.5em;
-    opacity: 0.8;
-    margin-top: calc((62vh - 50px) / 2);
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    margin-top: calc((61vh - 47px) / 2);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     background-color: dimgray;
   }
   .personal-text,
