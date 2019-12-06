@@ -60,7 +60,8 @@ h1 {
 }
 
 .why-icon {
-  font-size: 60px !important;
+  color: #1ec2d4;
+  font-size: 50px !important;
 }
 
 /* 
@@ -987,7 +988,11 @@ input[type="submit"] {
     padding-left: 0%;
     text-align: center;
     font-size: 1.5em;
-    margin-top: calc((35vh - 50px) / 2);
+    opacity: 0.8;
+    margin-top: calc((62vh - 50px) / 2);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: dimgray;
   }
   .personal-text,
   .rent-ready-container h3,
@@ -997,7 +1002,12 @@ input[type="submit"] {
     padding-left: 0%;
     text-align: center;
     font-size: 1em;
-    margin-top: calc((20vh - 45px) / 2);
+    margin-top: calc((39vh - 74px) / 2);
+    background-color: dimgray;
+    /* position: absolute; */
+    opacity: 0.8;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
   .personal-living,
   .rent-ready-container,
