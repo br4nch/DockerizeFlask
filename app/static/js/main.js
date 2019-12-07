@@ -153,7 +153,8 @@ $(".clickable-project").click(function() {
 
 /////////Function to add data to backend////////
 
-function fillForm() {
+function fillForm(event) {
+  event.preventDefault();
   $.ajax({
     url: "/api/add-lead/",
     method: "POST",
