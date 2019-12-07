@@ -1180,12 +1180,10 @@ footer {
     padding-left: 0%;
     text-align: center;
     font-size: 1.5em;
-    /* margin-top: calc((54vh - 0px) / 2); */
+    margin-top: calc((97vw - 0px) / 2);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: dimgray;
-    /* position: absolute; */
-    margin-top: 58%;
   }
   .personal-text,
   .rent-ready-container h3,
