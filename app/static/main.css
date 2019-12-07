@@ -5,6 +5,9 @@ html {
   font-family: "IBM Plex Sans", sans-serif;
   overflow-x: hidden;
 }
+a {
+  text-decoration: none;
+}
 
 button {
   border: 1px solid #ccc;
@@ -780,7 +783,6 @@ footer {
   text-decoration: none;
   display: inline-flex;
   list-style: none;
-  margin-right: 2em;
 
   color: white;
 }
