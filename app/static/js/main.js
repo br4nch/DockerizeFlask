@@ -1,5 +1,5 @@
 // Preloader
-$(window).on("load", function() {
+$(document).ready(function() {
   preloaderFadeOutTime = 200;
   function hidePreloader() {
     var preloader = $(".spinner-wrapper");
@@ -8,7 +8,6 @@ $(window).on("load", function() {
   }
   hidePreloader();
 });
-
 $(window)
   .scroll(function() {
     var windowBottom = $(this).scrollTop() + $(this).innerHeight();
