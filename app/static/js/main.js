@@ -181,3 +181,13 @@ function fillForm(event) {
     }
   });
 }
+$("#area").focusout(function() {
+  totalArea = parseInt($(this).val());
+  console.log(totalArea);
+  if (totalArea >= 5000) {
+    $("#city").append(new Option("Mumbai", "Mumbai"));
+    $("#city").append(new Option("Hyderabad", "Hyderabad"));
+    $("#city").append(new Option("Banglore", "Banglore"));
+  } else {
+  }
+});
