@@ -26,7 +26,7 @@ def leads() -> List[Dict]:
 
 
 class Leads(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     full_name = db.Column(db.String(64), index=True)
     email = db.Column(db.String(200), index=True)
     phone_no = db.Column(db.BigInteger, index=True)
@@ -49,10 +49,15 @@ class Leads(db.Model):
     def save(self):
         db.session.add(self)
         db.session.commit()
+    def pre_save(self):
+        db.session.add(self)
+        db.session.flush()
+
     
     def delete(self):
         db.session.delete(self)
         db.session.commit()
+    
 
     def soft_delete(self):
         self.deleted = True
@@ -76,13 +81,31 @@ def add_lead():
         leads_data = request.json
         new_lead = Leads()
         new_lead.full_name = leads_data.get("name")
+        new_lead.email = leads_data.get("email")
+        new_lead.phone_no = leads_data.get("phone_no")
+        new_lead.product = leads_data.get("product")
+        new_lead.area = leads_data.get("area")
+        new_lead.location = leads_data.get("location")
+
+        new_lead.pre_save()
+
+        sheets=GoogleAPI()
+        lead=[new_lead.id, new_lead.full_name, new_lead.email, new_lead.phone_no, new_lead.location, new_lead.product, new_lead.area ]
+        response = sheets.update_sheet(lead)
+
+
+        
+
+
+
+
         r = new_lead.save()
         pprint(r)
         
 
 
 
-        return {"json": leads_data,
+        return {"json":response ,
         "success":True}
     except Exception as e:
 

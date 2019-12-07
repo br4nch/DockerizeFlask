@@ -686,9 +686,10 @@
       </div>
     </section>
     <div id="overlay">
-      <div class="info-wrap" style="">
-        <form>
+      <div class="info-wrap">
+        <form id="cpa-form" method="POST">
           <button onclick="off()" type="button" class="close">X</button>
+          <div id="form-response"> 
           <h3 class="request-callback">Get A Callback</h3>
           <div class="input-group">
             <input
@@ -705,6 +706,7 @@
           <span class="help is-danger" style="display: none;"></span>
           <div class="input-group">
             <input
+            id="email"
               aria-describedby="sizing-addon2"
               type="email"
               placeholder="Email Address"
@@ -725,17 +727,19 @@
               minlength="10"
               name="phone"
               class="form-control"
+              id="tel-number"
             />
             <input
               class="form-control"
               type="number"
+              id="area"
               placeholder="Square Feet Area"
             />
           </div>
           <span class="help is-danger" style="display: none;"></span>
 
           <div class="input-group locandpoi">
-            <select name="location_" class="loc">
+            <select id="form-product" name="location_" class="loc">
               <option value="" disabled="disabled" selected="selected"
                 >Select Product</option
               >
@@ -746,7 +750,7 @@
               <option value="">Rent Ready</option>
               <option value="">Custom Design</option>
             </select>
-            <select name="location" required="required" class="poi">
+            <select name="location" required="required" id="city" class="poi">
               <option value="" selected>City</option>
               <option value="">Delhi NCR</option>
             </select>
@@ -754,7 +758,7 @@
           <input type="hidden" id="web_location" data-id="/" />
           <button
             id="proceed"
-            type="submit"
+            
             class="btn innov8-solid"
             onclick="fillForm()"
           >
@@ -765,6 +769,7 @@
             By clicking the above Get Quote button, you agree to our
             <a href="/terms/">Terms &amp; Conditions.</a>
           </p>
+        </div>
         </form>
       </div>
     </div>

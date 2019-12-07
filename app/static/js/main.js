@@ -153,23 +153,28 @@ $(".clickable-project").click(function() {
 
 /////////Function to add data to backend////////
 
+$("#cpa-form").submit(function(e) {
+  return false;
+});
 function fillForm(event) {
-  event.preventDefault();
   $.ajax({
     url: "/api/add-lead/",
     method: "POST",
     data: JSON.stringify({
-      name: "venkatesh",
-      email: "venky8283@hotmail.com",
-      phone_no: 8390188283,
+      name: $("#name-input").val(),
+      email: $("#email").val(),
+      phone_no: $("#tel-number").val(),
 
-      product: "Custom Design",
-      area: 1200,
-      location: "Delhi"
+      product: $("#form-product option:selected").text(),
+      area: $("#area").val(),
+      location: $("#city option:selected").text()
     }),
     contentType: "application/json",
     success: function(data) {
       console.log(data);
+      $("#form-response").html(
+        "<p>Thank you for choosing our services. We will shortyly get in touch with you.</p>"
+      );
     },
     error: function(data) {
       console.log(data);
