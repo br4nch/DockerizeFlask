@@ -1185,7 +1185,7 @@ footer {
     margin-top: calc((97vw - 0px) / 2);
     /* border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px; */
-    background-color: dimgray;
+    background-color: transparent;
   }
   .personal-text,
   .rent-ready-container h3,
